@@ -1,10 +1,15 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Formulario from "./components/Formulario";
 import Cita from "./components/Cita";
 
 function App() {
+
+  let citasLocalStorage = JSON.parse(localStorage.getItem('citas'));
+  if (!citasLocalStorage) {
+    citasLocalStorage = [];
+  }
 
   const vet = {
     name: '🐶Patita Felíz🐶',
@@ -14,7 +19,15 @@ function App() {
 
   const currentDate = new Date().getFullYear();
 
-  const [citas, registrarCitas] = useState([]);
+  const [citas, registrarCitas] = useState(citasLocalStorage);
+
+  useEffect(() => {
+    if (citasLocalStorage) {
+      localStorage.setItem('citas', JSON.stringify(citas));
+    } else {
+      localStorage.setItem('citas', JSON.stringify([]));
+    }
+  }, [citas, citasLocalStorage]);
 
   const crearCita = (cita) => {
     registrarCitas([
@@ -30,7 +43,7 @@ function App() {
     registrarCitas(citasRestantes);
   }
 
-  const tituloCita = citas.length === 0 ? '🐱Registra tu cita🐱' : '🐤Administre sus citas🐤';
+  const tituloCita = citas.length === 0 ? '🐱Registra tu cita🐱' : '🐤Administrar citas🐤';
 
   return (
     <Fragment>

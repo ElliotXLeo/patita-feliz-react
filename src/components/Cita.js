@@ -5,7 +5,7 @@ const Cita = ({ cita, eliminarCita }) => {
   const { id, nombreMascota, nombrePropietario, fecha, hora, sintomas } = cita;
 
   return (
-    <section className="cita">
+    <section className="cita animate__animated animate__fadeInUp">
       <p> Mascota: <span>{nombreMascota}</span></p>
       <p> Propietario: <span>{nombrePropietario}</span></p>
       <p> Fecha: <span>{fecha}</span></p>
