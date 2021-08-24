@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# [Veterinaria JP R](https://veterinariajpr.netlify.app) | [<img src="https://image.flaticon.com/icons/png/512/174/174857.png" height="20"/>](https://www.linkedin.com/in/elliotgaramendi/) | [<img src="https://image.flaticon.com/icons/png/512/733/733553.png" height="20"/>](https://github.com/ElliotXLeo) | [<img src="https://image.flaticon.com/icons/png/512/145/145802.png" height="20"/>](https://www.facebook.com/elliotgaramendi) | [<img src="https://image.flaticon.com/icons/png/512/1384/1384055.png" height="20"/>](https://api.whatsapp.com/send?phone=51997045329) | [<img src="https://image.flaticon.com/icons/png/512/975/975645.png" height="20"/>](https://elliotxleo.github.io/personal-web-responsive-ym/) | [<img src="https://image.flaticon.com/icons/png/512/5439/5439199.png" height="20"/>](mailto:elliotgaramendi@gmail.com) | 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![veterinaria-jp-r](https://i.imgur.com/iOg9gT4.png)](https://veterinariajpr.netlify.app)
 
-## Available Scripts
+Desarrollado con React, HTML, CSS, JavaScript, localStorage, Bootstrap, SweetAlert2 y Animate.css. Veterinaria Patita Feliz. Aplicación que cuenta con un formulario para el registro de citas, además, se puede confirmar las citas como también eliminarlas.
 
-In the project directory, you can run:
+## Instalación
+- Ubicarse en la carpeta que contendrá el proyecto
+- Abrir terminal de comandos
+  - git clone https://github.com/ElliotXLeo/veterinaria-jp-r
+  - cd veterinaria-jp-r
+  - npm install
+  - npm start
+    - Levanta un servidor con la aplicación
+  - npm run build
+    - Genera un paquete para el despliegue en producción
 
-### `npm start`
+## Tecnologías usadas
+| React | HTML | CSS | JavaScript | Bootstrap | SweetAler2 | Animate.css |
+| --- | --- | --- | --- | --- | --- | --- |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" width="1000px"/> | <img src="https://javier-rodriguez.vercel.app/img/logos/html-5.svg" width="1000"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/1200px-CSS.3.svg.png" width="1000"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="1000"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" width="1000px"/> | <img src="https://sweetalert2.github.io/images/SweetAlert2.png" width="1000px"/> | <img src="https://animate.style/img/animatecss-opengraph.jpg" width="1000px"/> |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Redes sociales
+- LinkedIn: https://www.linkedin.com/in/elliotgaramendi/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- GitHub: https://github.com/ElliotXLeo
 
-### `npm test`
+- Facebook: https://www.facebook.com/elliotgaramendi
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- WhatsApp: https://api.whatsapp.com/send?phone=51997045329
 
-### `npm run build`
+- Personal Web: https://elliotxleo.github.io/personal-web-responsive-ym/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Correo: elliotgaramendi@gmail.com
