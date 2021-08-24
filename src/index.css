@@ -68,8 +68,9 @@ input[type="date"], input[type="time"] {
 .cita {
   padding: 2rem;
   background: white;
-  border-bottom: 0.1rem solid #e1e1e1;
+  border-radius: 1rem;
   color: black;
+  margin: 1rem 0;
 }
 
 .cita p {
@@ -100,11 +101,13 @@ input[type="date"], input[type="time"] {
 .alerta-error {
   background-color: white;
   color: red;
-  padding: 1rem;
-  font-size: 2rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-family: 'Staatliches', cursive;
+  border-radius: 1rem;
 }
 
 .footer {
