@@ -4,6 +4,8 @@ import Footer from './components/Footer';
 import Formulario from "./components/Formulario";
 import Cita from "./components/Cita";
 
+import Swal from 'sweetalert2';
+
 function App() {
 
   let citasLocalStorage = JSON.parse(localStorage.getItem('citas'));
@@ -35,13 +37,62 @@ function App() {
       ...citas,
       cita
     ]);
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: '¡Cita registrada!',
+      showConfirmButton: false,
+      timer: 4000,
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
   }
 
   const eliminarCita = (id) => {
-    const citasRestantes = citas.filter((cita) => {
-      return cita.id !== id;
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
     });
-    registrarCitas(citasRestantes);
+    swalWithBootstrapButtons.fire({
+      title: '¿Estás segur@?',
+      text: "¡No podrás revertir esto!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: '¡Sí, bórralo!',
+      cancelButtonText: '¡No, cancélalo!',
+      reverseButtons: true,
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const citasRestantes = citas.filter((cita) => {
+          return cita.id !== id;
+        });
+        registrarCitas(citasRestantes);
+        swalWithBootstrapButtons.fire(
+          '¡Eliminado!',
+          'Ha sido eliminado.',
+          'success'
+        );
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        swalWithBootstrapButtons.fire(
+          'Cancelad@',
+          'Está seguro :)',
+          'error'
+        );
+      }
+    });
   }
 
   const tituloCita = citas.length === 0 ? '🐤Registra tu cita🐤' : '🐤Administrar citas🐤';
