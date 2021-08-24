@@ -22,12 +22,13 @@ function App() {
   const [citas, registrarCitas] = useState(citasLocalStorage);
 
   useEffect(() => {
+    let citasLocalStorage = JSON.parse(localStorage.getItem('citas'));
     if (citasLocalStorage) {
       localStorage.setItem('citas', JSON.stringify(citas));
     } else {
       localStorage.setItem('citas', JSON.stringify([]));
     }
-  }, [citas, citasLocalStorage]);
+  }, [citas]);
 
   const crearCita = (cita) => {
     registrarCitas([

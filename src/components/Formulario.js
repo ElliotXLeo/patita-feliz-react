@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
-import uuid from 'uuid/dist/v4'
+import uuid from 'uuid/dist/v4';
+import PropTypes from 'prop-types';
 
 const Formulario = ({ crearCita }) => {
 
@@ -61,7 +62,7 @@ const Formulario = ({ crearCita }) => {
             id="nombreMascota"
             aria-describedby="textHelp"
             placeholder="Nombre de la mascota"
-            // required
+            required
             onChange={actualizarState}
             value={nombreMascota}
           />
@@ -74,7 +75,7 @@ const Formulario = ({ crearCita }) => {
             id="nombrePropietario"
             aria-describedby="textHelp"
             placeholder="Nombre del propietario"
-            // required
+            required
             onChange={actualizarState}
             value={nombrePropietario}
           />
@@ -86,7 +87,7 @@ const Formulario = ({ crearCita }) => {
             className="form-control"
             id="fecha"
             aria-describedby="textHelp"
-            // required
+            required
             onChange={actualizarState}
             value={fecha}
           />
@@ -98,7 +99,7 @@ const Formulario = ({ crearCita }) => {
             className="form-control"
             id="hora"
             aria-describedby="textHelp"
-            // required
+            required
             onChange={actualizarState}
             value={hora}
           />
@@ -111,7 +112,7 @@ const Formulario = ({ crearCita }) => {
             id="sintomas"
             aria-describedby="textHelp"
             placeholder="Síntomas"
-            // required
+            required
             onChange={actualizarState}
             value={sintomas}
           />
@@ -123,6 +124,10 @@ const Formulario = ({ crearCita }) => {
       </form>
     </Fragment>
   );
+}
+
+Formulario.propTypes = {
+  crearCita: PropTypes.func.isRequired
 }
 
 export default Formulario;
