@@ -12,7 +12,7 @@ function App() {
   }
 
   const vet = {
-    name: '🐶Patita Felíz🐶',
+    name: '🐶Patita Feliz🐶',
     slogan: '🐭Porque es parte de nuestra familia, lo cuidamos.🐭',
     comercialActivity: 'Veterinaria'
   }
@@ -44,7 +44,7 @@ function App() {
     registrarCitas(citasRestantes);
   }
 
-  const tituloCita = citas.length === 0 ? '🐱Registra tu cita🐱' : '🐤Administrar citas🐤';
+  const tituloCita = citas.length === 0 ? '🐤Registra tu cita🐤' : '🐤Administrar citas🐤';
 
   return (
     <Fragment>
@@ -69,8 +69,7 @@ function App() {
             <section className="col-md-5 my-2 mx-auto">
               <div className="row align-items-start animate__animated animate__fadeInUp">
                 <div className="container__title">
-                  <h2>{tituloCita}</h2>
-
+                  <h3>{tituloCita}</h3>
                   {citas.map((cita) => {
                     return (
                       <Cita
