@@ -1,8 +1,10 @@
 html {
   min-height: 100%;
+  --gold: #ffd700;
+  --text-color: #ffffff;
 }
 
-body {
+.body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -11,9 +13,17 @@ body {
   padding-bottom: 5rem;
 }
 
-h1, h2 {
+.header {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.header__name {
+  color: var(--gold);
+}
+
+h1, h2, h3 {
   color: white;
-  padding: 3rem 0;
   text-align: center;
   text-transform: uppercase;
   font-family: 'Staatliches', cursive;
@@ -95,4 +105,9 @@ input[type="date"], input[type="time"] {
   text-transform: uppercase;
   text-align: center;
   font-family: 'Staatliches', cursive;
+}
+
+.footer {
+  text-align: center;
+  color: var(--text-color);
 }
