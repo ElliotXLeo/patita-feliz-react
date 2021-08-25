@@ -49,14 +49,14 @@ function App() {
       hideClass: {
         popup: 'animate__animated animate__fadeOutUp'
       }
-    })
+    });
   }
 
   const eliminarCita = (id) => {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
-        confirmButton: 'btn btn-success',
-        cancelButton: 'btn btn-danger'
+        confirmButton: 'btn btn-success mx-2',
+        cancelButton: 'btn btn-danger mx-2'
       },
       buttonsStyling: false
     });
@@ -105,35 +105,25 @@ function App() {
 
       <main>
         <section className="container">
-          <div className="row align-items-start">
+          <div className="row align-items-start justify-content-center animate__animated animate__fadeInUp">
+            <section className="col-md-5 my-2">
+              <Formulario
+                crearCita={crearCita}
+              />
+            </section>
 
-            <section className="col-md-5 my-2 mx-auto">
-              <div className="row align-items-start animate__animated animate__fadeInUp">
-                <div className="container__title">
-                  <Formulario
-                    crearCita={crearCita}
+            <section className="col-md-5 my-2">
+              <h3>{tituloCita}</h3> 
+              {citas.map((cita) => {
+                return (
+                  <Cita
+                    key={cita.id}
+                    cita={cita}
+                    eliminarCita={eliminarCita}
                   />
-                </div>
-              </div>
+                );
+              })}
             </section>
-
-            <section className="col-md-5 my-2 mx-auto">
-              <div className="row align-items-start animate__animated animate__fadeInUp">
-                <div className="container__title">
-                  <h3>{tituloCita}</h3>
-                  {citas.map((cita) => {
-                    return (
-                      <Cita
-                        key={cita.id}
-                        cita={cita}
-                        eliminarCita={eliminarCita}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            </section>
-
           </div>
         </section>
       </main>

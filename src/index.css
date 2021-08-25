@@ -42,10 +42,6 @@ h1, h2, h3 {
   margin: 0;
 }
 
-.lista-citas .media-body button {
-  margin-top: 1rem!important;
-}
-
 .lista-citas .media-body span {
   font-weight: bold;
 }
