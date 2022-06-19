@@ -47,33 +47,33 @@ const AppointmentsAppointment = ({ appointment, readAppointment, deleteAppointme
     >
       <div className="d-flex align-items-center justify-content-between">
         <h5 className="m-0"><span className="fw-bolder">Mascota:</span> {mascota}</h5>
-        <small className="badge bg-primary rounded-pill">{fecha} {hora}</small>
+        <small className="badge bg-primary rounded-pill">📆 {fecha} 🕑 {hora}</small>
       </div>
       <p className="m-0"><span className="fw-bolder">Síntomas:</span> {sintomas}</p>
-      <div className="row gap-2">
-        <h6 className="m-0 col-md"><span className="fw-bolder">Propietario:</span> {propietario}</h6>
-        <div className="col-md d-flex gap-1">
+      <div className="d-flex align-items-center justify-content-between">
+        <h6 className="m-0"><span className="fw-bolder">Propietario:</span> {propietario}</h6>
+        <div className="d-flex gap-1">
           <a
             href={`${urlWhatsapp} Mascota: ${mascota}, Propietario: ${propietario}, Fecha: ${fecha}, Hora: ${hora} Síntomas: ${sintomas}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary btn-sm"
           >
-            Confirmar
+            ✅ Confirmar
           </a>
           <button
             type="button"
             className="btn btn-warning btn-sm"
             onClick={() => readAppointment(_id)}
           >
-            Editar
+            ✏ Editar
           </button>
           <button
             type="button"
             className="btn btn-danger btn-sm"
             onClick={() => handleDelete(_id)}
           >
-            Eliminar
+            ❌ Eliminar
           </button>
         </div>
       </div>
