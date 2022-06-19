@@ -47,7 +47,7 @@ const AppointmentsAppointment = ({ appointment, readAppointment, deleteAppointme
     >
       <div className="d-flex align-items-center justify-content-between">
         <h5 className="m-0"><span className="fw-bolder">Mascota:</span> {mascota}</h5>
-        <small className="badge bg-primary rounded-pill">📆 {fecha} 🕑 {hora}</small>
+        <small className="badge bg-primary rounded-pill"><i class="bi bi-calendar"></i> {fecha} <i class="bi bi-clock"></i> {hora}</small>
       </div>
       <p className="m-0"><span className="fw-bolder">Síntomas:</span> {sintomas}</p>
       <div className="d-flex align-items-center justify-content-between">
@@ -59,21 +59,21 @@ const AppointmentsAppointment = ({ appointment, readAppointment, deleteAppointme
             rel="noopener noreferrer"
             className="btn btn-primary btn-sm"
           >
-            ✅ Confirmar
+            <i class="bi bi-check-circle"></i>
           </a>
           <button
             type="button"
             className="btn btn-warning btn-sm"
             onClick={() => readAppointment(_id)}
           >
-            ✏ Editar
+            <i class="bi bi-pencil"></i>
           </button>
           <button
             type="button"
             className="btn btn-danger btn-sm"
             onClick={() => handleDelete(_id)}
           >
-            ❌ Eliminar
+            <i class="bi bi-x-circle"></i>
           </button>
         </div>
       </div>
